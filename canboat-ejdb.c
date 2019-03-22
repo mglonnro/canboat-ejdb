@@ -17,7 +17,7 @@ main(int argc, char **argv)
   jb = ejdbnew();
   printf("Opening database %s\n", argv[1]);
 
-  if (!ejdbopen(jb, argv[1], JBOWRITER | JBOCREAT | JBOTRUNC)) {
+  if (!ejdbopen(jb, argv[1], JBOWRITER | JBOCREAT)) {
     return 1;
   }
   //Get or create collection 'contacts'
